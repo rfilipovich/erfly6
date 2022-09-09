@@ -76,7 +76,7 @@ bool bMenuShown = false;
   
 #define COL2           12*FW
 
-static uint8_t reusableBuffer[800];
+static uint8_t reusableBuffer[0x800];
 static uint16_t reusableBufferOffset = 0;
 
 #define  lcdDrawText lcd_putsAtt
