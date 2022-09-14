@@ -664,7 +664,12 @@ void lcd_hbar(uint8_t x, uint8_t y, uint8_t w, uint8_t h, uint8_t percent) {
 /*---------------------------------------------------------------------------*/
 void refreshDiplay() {
   if (EepromActive && BLINK_ON_PHASE) {
-    lcd_hline(0, 0, EepromActive - '0' + 6);
+    uint8_t ee = EepromActive - '0' + 0;
+    if(ee) {
+      for(int i = 0; i < 3; i++) {
+        lcd_hline(1, 0 + i, 7);
+      };
+    };
   }
 
   LcdLock = 1;                  // Lock LCD data lines
