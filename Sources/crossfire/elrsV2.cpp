@@ -48,7 +48,7 @@ uint8_t curFieldChunk =0;
 uint8_t curNumSelection = 0;
 static uint32_t fieldTimeout= 0;
 static uint32_t linkstatTimeout = 0;
-uint8_t fieldData[72]; 
+uint8_t fieldData[72*2];
 uint8_t fieldDataLen = 0;
 int8_t expectedChunks = -1;
 uint8_t statusComplete = 0; 
